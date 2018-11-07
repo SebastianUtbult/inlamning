@@ -2,7 +2,11 @@ package Files;
 
 public class Mylibrary {
 	
-	static double g = 9.82;
+	static double g = 6.67;
+	static double R = 8.3144621;
+	static double p_0 = 1000;
+	static double c = 299792458;
+	static double g_swe = 9.82;
 	
 	//1
 	public static double FahrenheitToCelcius(double fahrenheit) {
@@ -23,7 +27,7 @@ public class Mylibrary {
 	}
 	//5
 	public static double kineticEnergy(double mass, double velocity) {
-		return (mass * (velocity * velocity))/2;
+		return mass * (velocity * velocity)/2;
 	}
 	//6
 	public static double potentialEnergy(double mass, double height) {
@@ -85,6 +89,49 @@ public class Mylibrary {
 	public static double velocityToHeight (double velocity) {
 		return velocity / g;
 	}
-
+	//21
+	public static double HeightToVelocity (double Height) {
+		return Height * g;
+	}
+	//22
+	public static double PressureOnObj (double force, double Area ) {
+		return force / Area;
+	}
+	//23
+	public static double PascalToArea (double Pa, double force){
+		return Pa * force;
+	}
+	//24
+	public static double CentimeterToInches (double Centimeter) {
+		return Centimeter * 0.3937;
+	}
+	//25
+	public static double SWEtoDANISHcurrency (double kronor) {
+		return kronor * 0.72345;
+	}
+	//26
+	public static double tension (double force, double Area) {
+		return force / Area;
+	}
+	//27
+	public static double LiftForce (double mass, double Area) {
+		return mass * Area;
+	}
+	//28
+	public static double time (double work, double force) {
+		return work * force;
+	}
+	//29
+	public static double MeterToKm (double Meter) {
+		return Meter *1000;
+	}
+	//30
+	public static double KmToMiles (double km) {
+		return km*10;
+	}
+	
+	
+	
+	
 	
 }
